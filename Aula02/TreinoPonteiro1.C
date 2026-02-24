@@ -39,6 +39,16 @@ void swapline(int **matrix, int source, int target)
     matrix[target] = temporary;
 }
 
+void swapCol(int **matrix, int source, int target)
+{
+    for(int i = 0; i < nrows; i++)
+    {
+    int *temporary = matrix[i][source];
+    matrix[i][source] = matrix[i][target];
+    matrix[i][source] = temporary;
+    }
+}
+
 int main () 
 {
 

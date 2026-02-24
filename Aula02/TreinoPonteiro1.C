@@ -34,7 +34,9 @@ void print (int **matrix, int nrows, int ncols)
 void swapline(int **matrix, int source, int target)
 
 {
-     **matrix
+    int *temporary = matrix[source];
+    matrix[source] = matrix[target];
+    matrix[target] = temporary;
 }
 
 int main () 
